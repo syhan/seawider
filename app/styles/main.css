@@ -1,0 +1,427 @@
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+body {
+  padding: 0;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+  border-bottom: 1px solid #e5e5e5;
+}
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+  padding-bottom: 19px;
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+}
+.marketing p + h4 {
+  margin-top: 28px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+
+html, body, {
+    flex: 1 1 0
+}
+
+.container-fluid {
+  min-height: 100%
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+/*Demo Jam CSS*/
+.navbar-default{
+  background-color: #abc7df;
+  margin-bottom: 0px;
+  border-radius: 0px
+}
+
+.c-container{
+  margin-right: 0px !important;
+  margin-left: 0px !important;
+}
+
+.nav-tabs {
+  border-bottom: 1px solid #abc7df;
+}
+
+.c-list-group{
+  overflow:hidden;
+  position: relative;
+  display: block;
+  margin-bottom: -1px;
+  background-color: #fff;
+  border: 1px solid #abc7df;
+}
+
+.c-list-head {
+  color: #4f7a9c !important;
+}
+
+.active,
+.active:hover,
+.active:focus {
+    background-color: #DBE7F2 !important;
+    border-color: #e6edfd !important;
+}
+
+.c-list-p {
+  color: black !important;
+}
+
+.c-list-head-number{
+  color: black !important;
+  font-size: 1.2em;
+}
+
+.tab-content{
+  height: auto;
+  max-height: 616px;
+  overflow-x: hidden;
+}
+
+.star {
+  color: orange;
+}
+
+.btn-comform {
+  border-radius: 1.6em;
+  background-color: #FFFFFF;
+  color: #4f7a9c;
+  border-color: #4f7a9c;
+  border-width: 1px;
+  padding: 0px 10px
+}
+
+.btn-conform:hover,
+.btn-comform:focus {
+  border-radius: 1.6em;
+  background-color: #4f7a9c;
+  color: #FFFFFF;
+  border-color: #4f7a9c;
+  border-width: 1px;
+  padding: 0px 10px
+}
+
+.table-style {
+  background-color: #f6f7fc;
+}
+
+.table-style > thead > tr > th {
+  color: #858b94;
+  font-weight: 100;
+  line-height: 14px;
+}
+.table > tbody > tr > td {
+  line-height: 20px !important;
+  padding: 5px !important;
+  padding-left: 8px !important;
+}
+.table > thead > tr > th {
+  border-bottom: 0px;
+}
+
+.table-font {
+  color: #427cac;
+  font-weight: bold !important;
+}
+
+#dialog strong{
+  color: #959faf;
+  font-weight: normal;
+}
+
+.inline_block {
+  display: inline-block;
+  background-color: #fff;
+  padding: 5px 10px;
+
+  *display: inline;
+  *zoom: 1;
+}
+
+.mapContent {
+  height: 660px;
+  background-color: #eff4f9 !important;
+}
+
+.mapContent .tab-content {
+  overflow: visible;
+}
+
+.left-container {
+  border-right: #abc7df solid 3px;
+  background-color: #eff4f9 !important;
+  padding-top: 12px;
+  padding-right: 0px;
+}
+
+.list-group-item {
+  border: 1px solid #abc7df;
+  border-radius: 0px !important;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    font-size: bold;
+    cursor: default;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+}
+.amap-marker-label {
+  position: absolute;
+  z-index: 2;
+  border-radius: 20px;
+  background-color: white;
+  white-space: nowrap;
+  cursor: default;
+  font-size: 18px;
+  display: inline-block;
+  line-height: 24px;
+  width: 36px;
+  text-align: center;
+  color: #407dab;
+  height: 22px;
+  box-shadow: 1px 1px 0px #ababab;
+}
+
+.topContent {
+  border-bottom: 2px solid #abc7df;
+}
+
+.float-flag-open{
+  position: absolute;
+  top: 285px;
+  left: 0%;
+  z-index: 999;
+  background-color: white;
+  border: 1px solid gray;
+}
+
+.float-flag-open:hover{
+  background-color: #427CAC;
+}
+
+.float-flag-close{
+  position: absolute;
+  top: 200px;
+  left: 0%;
+  z-index: 999;
+  background-color: white;
+  border: 1px solid gray;
+}
+
+.float-flag-close:hover{
+  background-color: #427CAC;
+}
+
+
+.floatRightTop{
+  position: absolute;
+  top: 70px;
+  left: 95%;
+  z-index: 999;
+}
+
+.floatMapTop {
+}
+
+#successfulMessage {
+  position: absolute;
+  border-radius: 1.2em;
+  bottom: 12px;
+  left: 36%;
+  z-index: 999;
+}
+
+.closePanelButton {
+    display: inline-block;
+    width: 84px;
+    height: 80px;
+    background: url(./../images/contract-icon-1.png) no-repeat;
+}
+
+.closePanelButton:hover{
+  background: url(./../images/contract-icon-2.png) no-repeat;
+}
+
+.openPanelButton{
+    display: inline-block;
+    width: 84px;
+    height: 80px;
+    background: url(./../images/request-icon-2.png) no-repeat;
+}
+.openPanelButton:hover{
+  background: url(./../images/request-icon-1.png) no-repeat;
+}
+
+.fullScreenButton{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+
+.bufferFirstRow{
+  padding: 0 13px;
+}
+
+.bufferSecondRow{
+  padding: 0em 13px;
+}
+
+.bufferThirdRow{
+  padding: 0em 13px;
+}
+
+.bufferFourthRow{
+  padding: 4px 13px 4px 13px;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.7);
+    border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 0px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.7);
+}
+#leftContainer .text-primary {
+  color: #337ab7 !important;
+  font-size: 16px !important;
+}
+#leftContainer .c-list-p {
+  font-size: 13px !important;
+}
+.leftNavTab {
+  background: #eff4f9;
+}
+.leftNavTab .nav-tabs > li a {
+  background: #eff4f9;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+  line-height: 0.8;
+}
+.leftNavTab .nav-tabs > li {
+  margin-bottom: 0px;
+}
+.leftNavTab .nav-tabs > li.active > a, .leftNavTab .nav-tabs > li.active > a:hover, .leftNavTab .nav-tabs > li.active > a:focus {
+  background-color: #f0f4f9;
+  border: none;
+  color: #407dab !important;
+  border-bottom: solid 3px #407dab;
+  padding: 10px 14px 7px 14px;
+}
+.leftNavTab li.active, .leftNavTab li.active:hover, .leftNavTab li.active:focus {
+  background-color: #eff4f9 !important;
+  border-color: #eff4f9 !important;
+}
+
+.contractChart {
+  margin-top: 6px
+}
+.table {
+  margin-bottom: 0px;
+}
+.leasibleResources:hover {
+  cursor: pointer;
+  background: #abc7e0;
+}
+
+.chart1 {
+  border: 1px solid #abc7df;
+  padding-left: 1em;
+  width: 100%;
+  height: 260px;
+  padding-top: 11px;
+  background-color: #FFFFFF;
+  padding-left: 15px;
+}
+
+.chart2 {
+  border: 1px solid #abc7df;
+  padding-left: 1em;
+  width: 100%;
+  height: 240px;
+  padding-top: 11px;
+  background-color: #FFFFFF;
+  padding-left: 15px;
+}
+
+.modal-dialog {
+    margin: 220px auto !important;
+}
+.chart1:hover, .chart2:hover {
+  background: #dce8f1;
+  border: 1px solid #98faf9;
+}
+.itemLink {
+  padding-left: 132px;
+  font-weight: bold;
+  font-size: 15px;
+}

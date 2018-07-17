@@ -1,0 +1,171 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+#mapContainer {
+/*  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;*/
+
+  position: relative;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 659px;
+}
+
+.button-group {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 12px;
+  padding: 10px;
+}
+
+.button-group .button {
+  height: 28px;
+  line-height: 28px;
+  background-color: #0D9BF2;
+  color: #FFF;
+  border: 0;
+  outline: none;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 3px;
+  margin-bottom: 4px;
+  cursor: pointer;
+}
+ /*
+.tip {
+  position: absolute;
+  bottom: 30px;
+  right: 10px;
+  background-color: #FFF;
+  text-align: center;
+  border: 1px solid #ccc;
+  line-height: 30px;
+  border-radius: 3px;
+  padding: 0 5px;
+  font-size: 12px;
+}
+*/
+#tip {
+  background-color: #fff;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: absolute;
+  font-size: 12px;
+  right: 10px;
+  top: 20px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  line-height: 30px;
+}
+
+/*
+#tip input[type='button'] {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #0D9BF2;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 3px;
+  outline: none;
+  border: 0;
+}
+*/
+.amap-info-content {
+  font-size: 12px;
+}
+.navbar .title {
+  margin: 0 auto;
+  width: 200px;
+  margin-top: 4px;
+}
+.navbar a {
+  display: inline-block;
+  width: 40px;
+  height: 37px;
+}
+.navbar a.drop {
+  background: url(../images/arrow_down.png) no-repeat;
+  width: 30px;
+  height: 27px;
+}
+.navbar span {
+  font-size: 20px;
+  color: #4c7599;
+}
+.left-nav {
+  left: 24px;
+  top: 5px;
+  position: absolute;
+}
+.right-nav {
+  right: 24px;
+  top: 5px;
+  position: absolute;
+}
+.amap-marker-label {
+  position: absolute;
+  z-index: 2;
+  border-radius: 20px;
+  background-color: #6291f1;
+  white-space: nowrap;
+  cursor: default;
+  font-size: 12px;
+  display: inline-block;
+  line-height: 16px;
+  text-align: center;
+  color: #ffffff;
+  height: 18px;
+  box-shadow: none;
+  padding: 2px;
+  border: none;
+  width: 28px;
+}
+.legend {
+  background: url(../images/legend.png) no-repeat;
+  width: 200px;
+  height: 150px;
+  z-index: 100;
+  position: absolute;
+  bottom: 2px;
+  left: 12px;
+}
+.tab-content > .active {
+  margin-top: -1px;
+  margin-right: -2px;
+}
+.list-group-item:last-child {
+  margin-bottom: -1px;
+}
+::-webkit-scrollbar {
+    width: 14px;
+    background: #eff4f9;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: none !important;
+    border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 0px;
+    background: #abc7e0;
+    -webkit-box-shadow: none !important;
+}
+.mapSmallHeight {
+  height: 537px !important;
+}

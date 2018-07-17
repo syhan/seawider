@@ -1,0 +1,299 @@
+<div class="header ">
+  <div class="navbar navbar-default" role="navigation">
+    <div class="left-nav">
+      <a style="background: url(../images/user.png) no-repeat" href=""></a>
+      <a id="back" class="hide" style="background:url(../images/arrow_back.png) no-repeat" ng-click="onClosePanel()"></a>
+      <a style="background:url(../images/home.png) no-repeat" href=""></a>
+      <a style="background:url(../images/logo.png) no-repeat; width: 60px;" href=""></a>
+    </div>
+     <div class="title"><span>Shared Container</span><a class="drop" href=""></a></div>
+     <div class="right-nav">
+       <a style="background:url(../images/search.png) no-repeat" href=""></a>
+       <a style="background:url(../images/co-pilot.png) no-repeat" href=""></a>
+       <a style="background:url(../images/notification.png) no-repeat" href=""></a>
+     </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="float-flag-open">
+      <a id="closeButton" class="closePanelButton" ng-click="onOpenContractPanel()"></a> <!--Close button is Contract Button-->
+    </div>
+    <div class="float-flag-close">
+      <a id="openButton" class="openPanelButton" ng-click="onOpenPanel()"></a> <!--Open button is Request Button-->
+    </div>
+
+    <div ng-controller="ModalDemoCtrl as $ctrl" id="dialog" class="dialog modal-demo">
+      <script type="text/ng-template" id="myModalContent.html">
+          <div class="modal-header" style="position: absolute; width: 800px; height: 75px; border: solid 3px #e7e7e7;
+           background-color: #f7f7f7; left: -20%;">
+              <span class="close" ng-click="$ctrl.cancel()">&times;</span>
+              <h4 style="color: #4881af; text-align: center; padding-bottom:0px; padding-top: 5px">Contract COS-01</h4>
+          </div>
+          <div class="modal-body info inline_block" id="modal-body" style="width: 800px; height: 290px; border: solid 3px #e7e7e7; background-color: #fff; left: -20%; bottom: -75px;">
+            <div class="containerdetail">
+              <image src="../images/container.png" class="inline_block" style="padding: 25px 8px"></image>
+              <p class="inline_block"><strong>Lease To</strong><br>COSCO</br></p>
+              <p class="inline_block"><strong>Type</strong><br>20ST</br></p>
+              <p class="inline_block"><strong>Area of Usage</strong><br>APJ</br></p>
+              <p class="inline_block"><strong>Valid period From</strong><br>2018/03/10</br></p>
+              <p class="inline_block"><strong>Valid period To</strong><br>2018/12/31</br></p>
+            </div>
+            <div style="border: solid 1px #d9dce3"/>
+            <div class="transportationdetai">
+              <image src="../images/location-grey.png" class="inline_block" style="padding: 24px"></image>
+              <p class="inline_block"><strong>Return Locations</strong><br>DEPOT1</br></p>
+              <p class="inline_block"><strong>Rental Rate/day</strong><br>$10</br></p>
+              <p class="inline_block"><strong>Grading</strong><br>Food Grade</br></p>
+              <p class="inline_block"><strong>Leasing Type</strong><br>Voyage charter</br></p>
+            </div>
+            <div style="border: solid 1px #d9dce3"/>
+              <div class="contractdetai">
+                <image src="../images/contract-grey.png" class="inline_block" style="padding:26px"></image>
+                <p class="inline_block"><strong>Max Quota(PCS)</strong><br>2000</br></p>
+                <p class="inline_block"><strong>Current On-Hired(PCS)</strong><br>30%</br></p>
+                <p class="inline_block"><strong>Cumulative On-Hired(PCS)</strong><br>1200</br></p>
+                <p class="inline_block"><strong>Off-Hired(PCS)</strong><br>800</br></p>
+              </div>
+            </div>
+          </div>
+      </script>
+      <script type="text/ng-template" id="stackedModal.html">
+        <div class="modal-header" style="width: 400px; height: 50px; border: solid 1px #e7e7e7;background-color: #f7f7f7;">
+          <span class="close" ng-click="$ctrl.close()">&times;</span>
+          <h4 class="modal-title" id="modal-title-{{name}}" style="color: #4881af; text-align: center;
+          padding-top: 5px; padding-bottom:10px">Comfirmation</h4>
+        </div>
+        <div class="modal-body" id="modal-body-{{name}}" style="width: 400px; height: 120px; border: solid 1px #e7e7e7;background-color: #fff;">
+            Do you confirm to sign this contract?
+        </div>
+        <div class="modal-footer" style="width: 400px; height: 60px; border: solid 1px #e7e7e7;background-color: #f7f7f7;">
+            <button class="btn " type="button" ng-click="$ctrl.close()">Cancle</button>
+            <button class="btn btn-primary" type="button" ng-click="$ctrl.sign()">Sign</button>
+        </div>
+      </script>
+      <div id="successfulMessage" class="hide" style="height:80px; width:1000px;">
+        <a style="background:url(../images/notification1.png) no-repeat; display: inline-block;width:800px;height:200px;" href=""></a>
+      </div>
+    </div>
+
+    <div id="leftContainer" class="col-md-3 left-container hide">
+      <div class="row">
+        <div class="col-md-7">
+          <h4 class="list-group-item-heading">{{listTitle}}<h4>
+        </div>
+        <div class="col-md-5">
+           <p style="display: inline-block;">  {{listLength}} items</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <p class="c-list-p">Ranked by: <span class="text-primary">Start Time</span></p>
+        </div>
+      </div>
+      <uib-tabset class="leftNavTab" active="active">
+        <uib-tab ng-repeat="tab in tabs" heading="{{tab.title}}" select="onTabSelected($index, $heading)">
+          <div id="requestCategoryList" class="list-group c-list-group" ng-repeat="result in requestList">
+            <a class="list-group-item" ng-class="{active: $index == selectedIndex }" ng-click="onRefreshContent($event, $index, result)">
+              <div class="row">
+                <div class="col-md-2 {{hide}}">
+                  <img src="../../images/container.png" width="50px" height="50px">
+                </div>
+                <div class="{{firstColumWith}}">
+                  <p>
+                    <h4 class="list-group-item-heading c-list-head">{{result.NAME}}</h4></p>
+                    <p class="c-list-p">
+                      <b>{{result.FROM_LOCATION}}</b> to <b>{{result.TO_LOCATION}}</b>
+                    </p>
+                </div>
+                <div class="col-md-3 text-right">
+                  <p class="c-list-head-number">{{result.QUANTITY}}</p>
+                  <p class="c-list-p">{{Quantity}}</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-7">
+                  <p class="list-group-item-text c-list-p">{{result.START_DATE}} - {{result.END_DATE}}</p>
+                </div>
+                <div class="col-md-5 text-right" style="padding-left: 0px">
+                  <p class="list-group-item-text c-list-p">{{result.GRADE}}</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </uib-tab>
+      </uib-tabset>
+    </div>
+    <div id="rightContainer" class="col-md-12 left-container mapContent">
+      <div id="topContent" class="topContent" ng-model="topContent">
+        <div id="firstRow" class="row bufferFirstRow">
+          <div class="col-md-1 text-left">
+            <p>Depots</p>
+          </div>
+          <div class="col-md-2 text-left">
+            <p>Total Containers</p>
+          </div>
+          <div class="col-md-3 text-left">
+            <p>Contrainer Types</p>
+          </div>
+        </div>
+        <div id="secondRow" class="row bufferSecondRow">
+         <div class="col-md-1 text-left">
+            <h4 style="font-weight: bold">40</h4>
+          </div>
+          <div class="col-md-2 text-left">
+            <h4 style="font-weight: bold">230</h4>
+          </div>
+          <div class="col-md-3 text-left">
+            <select class="form-control">
+              <option>All</option>
+              <option>20ST</option>
+              <option>40ST</option>
+              <option>40HC</option>
+            </select>
+          </div>
+        </div>
+        <div id="thirdRow" class="row hide bufferThirdRow">
+          <div class="col-md-1 text-left">
+            <h4 class="list-group-item-heading">{{topContent.NAME}}</h4>
+          </div>
+          <div class="col-md-6 text-left">
+            <p class="list-group-item-text c-list-p">From: <span class="text-primary">{{topContent.FROM_LOCATION}}</span> to <span class="text-primary">{{topContent.TO_LOCATION}}</span></p>
+          </div>
+          <div class="col-md-2 text-left">
+            <p class="list-group-item-text c-list-p">Container ID:</p>
+          </div>
+          <div class="col-md-2 text-left">
+            <p class="list-group-item-text c-list-p">Contract:</p>
+          </div>
+        </div>
+        <div id="fourthRow" class="row hide bufferFourthRow">
+          <div class="col-md-3 text-left">
+            <p  class="list-group-item-text c-list-p">Time: <span class="text-primary">Jan 08,2018-Feb 04,2018</span></p>
+          </div>
+          <div class="col-md-2 text-left">
+            <p  class="list-group-item-text c-list-p">Grade: <span class="text-primary">{{topContent.GRADE}}</span></p>
+          </div>
+          <div class="col-md-2 text-left">
+            <p  class="list-group-item-text c-list-p">Quantity: <span class="text-primary">{{topContent.QUANTITY}}</span></p>
+          </div>
+          <div class="col-md-2 text-left">
+            <p class="text-secondary">Not assigned</p>
+          </div>
+          <div class="col-md-2 text-left">
+            <p class="list-group-item-text c-list-p text-secondary">Not assigned</p>
+          </div>
+        </div>
+        <div id="fifthRow" class="row hide bufferThirdRow">
+          <div class="col-md-2 text-left">
+            <h4 class="list-group-item-heading">{{topContent.NAME}}</h4>
+          </div>
+          <div class="col-md-6 text-left">
+            <p class="text-muted">From: <b class="text-primary">{{topContent.FROM_LOCATION}}</b> to <b class="text-primary">{{topContent.TO_LOCATION}}</b> <a class="itemLink" href="">Monitor Chart</a></p>
+          </div>
+          <div class="col-md-4 text-right">
+            <p class="list-group-item-text c-list-p">Signed Deal</p>
+          </div>
+        </div>
+        <div id="sixthRow" class="row hide bufferFourthRow">
+          <div class="col-md-3 text-left">
+            <p class="text-muted">Time: <b class="text-primary">Jan 08,2018-Feb 04,2018</b></p>
+          </div>
+          <div class="col-md-2 text-left">
+            <p class="text-muted">Quantity: <b class="text-primary">{{topContent.QUANTITY}}</b></p>
+          </div>
+          <div class="col-md-4 text-left">
+            <p class="text-muted">Rental Fee: <b class="text-primary">{{topContent.GRADE}}</b></p>
+          </div>
+          <div class="col-md-3 text-right">
+            <h4 class="list-group-item-heading text-primary">{{topContent.QUANTITY}}</h4>
+          </div>
+        </div>
+      </div>
+      <div ng-controller="ModalDemoCtrl as $ctrl">
+        <table id="table" class="table table-style hide floatMapTop col-md-2">
+          <thead>
+            <tr>
+              <th style="padding-left: 28px">Container ID</th>
+              <th>Contract ID</th>
+              <th>Leasor</th>
+              <th>Rental</th>
+              <th>Transportation Cost</th>
+              <th>Total Cost</th>
+              <th>Ranking</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="leasibleResources" ng-repeat="result in table">
+              <td class="table-font containerId" style="padding-left: 28px">{{result.Container_ID}}</td>
+              <td><a ng-click="$ctrl.open()">{{result.Contract_ID}}</a></td>
+              <td>{{result.Leasor}}</td>
+              <td>{{result.Rental}}</td>
+              <td>{{result.Transportation_Cost}}</td>
+              <td>{{result.Total_Cost}}</td>
+              <td><span class="star" uib-rating ng-model="result.Ranking" max="5" state-on="'glyphicon glyphicon-star'" state-off="'glyphicon glyphicon-star-empty'" aria-labelledby="custom-icons-2" read-only="true"></span></td>
+              <td><button type="button" class="btn btn-comform" ng-click="$ctrl.openMultipleModals()">Comfirm</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="mapContainer">
+        <div class="legend"></div>
+      </div>
+      <div id="contractChart" class="contractChart hide">
+        <div class="row bufferFirstRow">
+          <div class="col-md-4 text-left">
+            <h4 class="list-group-item-heading">Revenue Analysis</h4>
+          </div>
+          <div class="col-md-4 text-right">
+            <p class="text-muted">View By: </p>
+          </div>
+          <div class="col-md-1">
+            <select>
+              <option>All Deals</option>
+            </select>
+          </div>
+          <div class="col-md-3 text-right">
+            <p><b class="text-primary">Monthly</b> Quarterly Yearly</p>
+          </div>
+        </div>
+            <div class="row">
+                <div class="col-md-4">
+                  <div class="chart1">
+                    <h5>Utilization Rate/Ranking</h5>
+                    <img src="../../images/Utilization Rate.png" />
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="chart1">
+                    <h5>Return / Pick-up Load Rate</h5>
+                    <img src="../../images/Return-pickup.png"/>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="chart1">
+                    <h5>Tunover Ratio</h5>
+                    <img src="../../images/turnover.png" />
+                  </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 5px">
+                <div class="col-md-6">
+                  <div class="chart2">
+                    <h5>Revenue /$</h5>
+                    <img src="../../images/revenue.png"/>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="chart2">
+                    <h5>Equivalent Co2 Emission  kg/TEU</h5>
+                    <img src="../../images/co2.png">
+                  </div>
+                </div>
+            </div>
+            </canvas>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/map.css" />
+  </head>
+  <body ng-app="uiApp">
+    <div ng-view="main" class="sub-container"></div>
+
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <script>
+       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+       }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');
+    </script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/about.js"></script>
+    <script src="scripts/es5.min.js"></script>
+    <script src="scripts/mapkey.min.js"></script>
+    <script src="scripts/map.min.js"></script>
+
+    <script id="my-infowin-tpl" type="text/template">
+        <div class="amap-ui-smp-ifwn-container">
+            <a class="amap-ui-infowindow-close amap-ui-smp-ifwn-def-tr-close">&#10006;</a>
+            <div class="amap-ui-smp-ifwn-content-body" style="width:300px;">
+                <h3 class="amap-ui-infowindow-title" style="width:100px;float:left"><%= infoTitle %></h3>
+                <div class="amap-ui-infowindow-body">
+                    <%= infoBody %>
+                </div>
+                <div style="clear:both"></div>
+                <h4><%= myCustomFooter %></h4>
+            </div>
+            <div class="amap-ui-smp-ifwn-combo-sharp"></div>
+        </div>
+    </script>
+</body>
+</html>

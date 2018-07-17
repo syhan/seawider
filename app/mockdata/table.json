@@ -1,0 +1,31 @@
+{
+    "d": {
+        "results": [
+            {
+                "Container_ID": "UESU3002469",
+                "Contract_ID": "COS-01",
+                "Leasor": "N.A Leaser",
+                "Rental": "$350",
+                "Transportation_Cost": "$800",
+                "Total_Cost": "$1150",
+                "Ranking": "4"
+            }, {
+                "Container_ID": "CRTU7403754",
+                "Contract_ID": "EMC-01",
+                "Leasor": "J.L Leaser",
+                "Rental": "$350",
+                "Transportation_Cost": "$1000",
+                "Total_Cost": "$1350",
+                "Ranking": "3"
+            }, {
+                "Container_ID": "UESU2103370",
+                "Contract_ID": "COS-01",
+                "Leasor": "N.A Leaser",
+                "Rental": "$350",
+                "Transportation_Cost": "$1100",
+                "Total_Cost": "$1450",
+                "Ranking": "3"
+            }
+        ]
+    }
+}
