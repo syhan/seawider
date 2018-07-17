@@ -378,11 +378,15 @@ module.exports = function (grunt) {
           dest: '<%= yeoman.dist %>',
           src: [
             '*.{ico,png,txt}',
-            '*.html',
-            'images/{,*/}*.{webp}',
-            'styles/fonts/{,*/}*.*'
+            'images/{,*/}*.*',
+            'styles/fonts/{,*/}*.*',
+            '{,*/}*.html',
+            '{,*/}*.css',
+            '{,*/}*.js',
+            '{,*/}*.json',
+            'scripts/{,*/}*.js'
           ]
-        }, {
+        }/*, {
           expand: true,
           cwd: '.tmp/images',
           dest: '<%= yeoman.dist %>/images',
@@ -392,14 +396,14 @@ module.exports = function (grunt) {
           cwd: 'bower_components/bootstrap/dist',
           src: 'fonts/*',
           dest: '<%= yeoman.dist %>'
-        }]
-      },
-      styles: {
-        expand: true,
-        cwd: '<%= yeoman.app %>/styles',
-        dest: '.tmp/styles/',
-        src: '{,*/}*.css'
-      }
+        }*/]
+      }//,
+      // styles: {
+      //   expand: true,
+      //   cwd: '<%= yeoman.app %>/styles',
+      //   dest: '.tmp/styles/',
+      //   src: '{,*/}*.css'
+      // }
     },
 
     // Run some tasks in parallel to speed up the build process
@@ -411,8 +415,8 @@ module.exports = function (grunt) {
         'copy:styles'
       ],
       dist: [
-        'copy:styles',
-        'imagemin',
+        // 'copy:styles',
+        // 'imagemin',
         'svgmin'
       ]
     },
@@ -470,8 +474,8 @@ module.exports = function (grunt) {
     // 'cssmin',
     // 'uglify',
     'filerev',
-    'usemin',
-    'htmlmin'
+    'usemin'
+    // 'htmlmin'
   ]);
 
   grunt.registerTask('default', [

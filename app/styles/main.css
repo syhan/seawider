@@ -78,12 +78,12 @@ body {
   }
 }
 
-html, body, {
+html, body {
     flex: 1 1 0
 }
 
 .container-fluid {
-  min-height: 100%
+  min-height: 100%;
   padding-right: 0px;
   padding-left: 0px;
 }

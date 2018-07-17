@@ -8,7 +8,7 @@
  * Controller of the uiApp
  */
 angular.module('uiApp').controller('MainCtrl', function($scope, $http) {
-    $http.get('/mockdata/requestList.json').then(function(response) {
+    $http.get('mockdata/requestList.json').then(function(response) {
         var requestType = [];
         var listByType = {};
         var tabs = [];
@@ -38,7 +38,7 @@ angular.module('uiApp').controller('MainCtrl', function($scope, $http) {
         $scope.rType = "Request";
     });
 
-    $http.get('/mockdata/contract.json').then(function(response) {
+    $http.get('mockdata/contract.json').then(function(response) {
         var requestType = [];
         var listByType = {};
         var tabs = [];
@@ -68,7 +68,7 @@ angular.module('uiApp').controller('MainCtrl', function($scope, $http) {
         $scope.cType = "Contract";
     });
 
-    $http.get('/mockdata/table.json').then(function(response) {
+    $http.get('mockdata/table.json').then(function(response) {
       $scope.table = response.data.d.results;
     });
 
@@ -305,7 +305,7 @@ angular.module('uiApp').controller('MainCtrl', function($scope, $http) {
                     new SimpleMarker({
                         // Point URL definition
                         iconStyle: {
-                            src: '../../images/area.png',
+                            src: 'images/area.png',
                             style: {
                                 width: '150px'
                             }
@@ -324,7 +324,7 @@ angular.module('uiApp').controller('MainCtrl', function($scope, $http) {
                     new SimpleMarker({
                         // Point URL definition
                         iconStyle: {
-                            src: '../../images/endpoint.gif',
+                            src: 'images/endpoint.gif',
                             style: {
                                 width: '45px'
                             }
@@ -344,7 +344,7 @@ angular.module('uiApp').controller('MainCtrl', function($scope, $http) {
                     new SimpleMarker({
                         // Point URL definition
                         iconStyle: {
-                            src: '../../images/startpoint.gif',
+                            src: 'images/startpoint.gif',
                             style: {
                                 width: '45px'
                             }
@@ -532,7 +532,7 @@ angular.module('uiApp').controller('MainCtrl', function($scope, $http) {
                     new SimpleMarker({
                         // Point URL definition
                         iconStyle: {
-                            src: '../../images/stockingpoint.png',
+                            src: 'images/stockingpoint.png',
                             style: {
                                 width: '70px'
                             }
@@ -783,7 +783,7 @@ angular.module('uiApp').controller('MainCtrl', function($scope, $http) {
                 var startPoint = new SimpleMarker({
                     // Point URL definition
                     iconStyle: {
-                        src: '../../images/startpoint.gif',
+                        src: 'images/startpoint.gif',
                         style: {
                             width: '45px'
                         }
@@ -803,7 +803,7 @@ angular.module('uiApp').controller('MainCtrl', function($scope, $http) {
                 var startPointBG = new SimpleMarker({
                     // Point URL definition
                     iconStyle: {
-                        src: '../../images/area.png',
+                        src: 'images/area.png',
                         style: {
                             width: '150px'
                         }
@@ -822,7 +822,7 @@ angular.module('uiApp').controller('MainCtrl', function($scope, $http) {
                 var endPoint = new SimpleMarker({
                     // Point URL definition
                     iconStyle: {
-                        src: '../../images/endpoint.gif',
+                        src: 'images/endpoint.gif',
                         style: {
                             width: '45px'
                         }
@@ -895,7 +895,7 @@ angular.module('uiApp').controller('MainCtrl', function($scope, $http) {
                     new SimpleMarker({
                         // Point URL definition
                         iconStyle: {
-                            src: '../../images/stockingpoint.png',
+                            src: 'images/stockingpoint.png',
                             style: {
                                 width: '70px'
                             }
@@ -966,7 +966,7 @@ angular.module('uiApp').controller('MainCtrl', function($scope, $http) {
               new SimpleMarker({
                   // Point URL definition
                   iconStyle: {
-                      src: '../../images/stockingpoint.png',
+                      src: 'images/stockingpoint.png',
                       style: {
                           width: '70px'
                       }
@@ -985,7 +985,7 @@ angular.module('uiApp').controller('MainCtrl', function($scope, $http) {
               new SimpleMarker({
                   // Point URL definition
                   iconStyle: {
-                      src: '../../images/stockingpoint.png',
+                      src: 'images/stockingpoint.png',
                       style: {
                           width: '70px'
                       }
@@ -1004,7 +1004,7 @@ angular.module('uiApp').controller('MainCtrl', function($scope, $http) {
               new SimpleMarker({
                   // Point URL definition
                   iconStyle: {
-                      src: '../../images/stockingpoint.png',
+                      src: 'images/stockingpoint.png',
                       style: {
                           width: '70px'
                       }
@@ -1023,7 +1023,7 @@ angular.module('uiApp').controller('MainCtrl', function($scope, $http) {
               new SimpleMarker({
                   // Point URL definition
                   iconStyle: {
-                      src: '../../images/truck.png',
+                      src: 'images/truck.png',
                       style: {
                           width: '36px'
                       }
@@ -1042,7 +1042,7 @@ angular.module('uiApp').controller('MainCtrl', function($scope, $http) {
               new SimpleMarker({
                   // Point URL definition
                   iconStyle: {
-                      src: '../../images/truck.png',
+                      src: 'images/truck.png',
                       style: {
                           width: '36px'
                       }
